@@ -60,7 +60,7 @@ curl -sL https://api.github.com/repos/justjanne/powerline-go/releases/latest | j
 
 git clone https://github.com/anyenv/anyenv.git ~/.anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
-anyenv install --init
+yes | anyenv install --init
 
 eval "$(anyenv init -)"
 git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
