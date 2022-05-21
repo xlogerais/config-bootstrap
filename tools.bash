@@ -42,6 +42,8 @@ asdf plugin add lsd https://github.com/argylelabcoat/asdf-lsd.git
 asdf install lsd latest
 asdf global lsd latest
 
+test -d ~/.local/bin || mkdir -p ~/.local/bin
+
 # broot
 test -x ~/.local/bin/broot || wget -O ~/.local/bin/broot "https://dystroy.org/broot/download/x86_64-linux/broot"
 
