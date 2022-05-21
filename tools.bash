@@ -17,6 +17,7 @@ tools+=(jq yq)
 tools+=(kubectl helm k9s)
 tools+=(vault)
 tools+=(terraform terragrunt)
+tools+=(ripgrep exa bat dust delta)
 
 for tool in "${tools[@]}"
 do
@@ -27,17 +28,22 @@ do
     asdf global ${tool} latest
 done
 
-# Powerline-go
-echo
-echo "-- Installing powerline-go"
-asdf plugin add justjanne-powerline-go git@plmlab.math.cnrs.fr:plmteam/common/asdf/justjanne/asdf-justjanne-powerline-go.git
-asdf install justjanne-powerline-go latest
-asdf global justjanne-powerline-go latest
-
-
 # Mcfly
 echo
 echo "-- Installing mcfly"
 asdf plugin add mcfly https://github.com/barolab/asdf-mcfly.git
 asdf install mcfly latest
 asdf global mcfly latest
+
+# lsd
+echo
+echo "-- Installing lsd"
+asdf plugin add lsd https://github.com/argylelabcoat/asdf-lsd.git
+asdf install lsd latest
+asdf global lsd latest
+
+# broot
+test -x ~/.local/bin/broot || wget -O ~/.local/bin/broot "https://dystroy.org/broot/download/x86_64-linux/broot"
+
+# powerline-go
+test -x ~/.local/bin/powerline-go || wget -O ~/.local/bin/powerline-go "https://github.com/justjanne/powerline-go/releases/latest/download/powerline-go-linux-amd64" && chmod +x ~/.local/bin/powerline-go
