@@ -1,11 +1,5 @@
 #!/bin/bash
 
-
-for file in config.d/*.bash
-do
-  bash $file
-done
-
 # Configuration BASH
 
 if [[ ! -d ~/.bash ]]
@@ -14,18 +8,8 @@ then
     bash ~/.bash/create-links.bash
 fi
 
-# Configuration VIM
+for file in config.d/*.bash
+do
+  bash $file
+done
 
-if [[ ! -d ~/.vim ]]
-then
-    git clone --recursive https://github.com/xlogerais/config-vim.git ~/.vim
-    bash ~/.vim/create-links.bash
-fi
-
-# Configuration NVIM
-
-if [[ ! -d ~/.config/nvim ]]
-then
-    git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-    nvim +PackerSync
-fi
