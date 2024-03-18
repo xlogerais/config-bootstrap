@@ -43,3 +43,10 @@ echo "-- Installing mcfly"
 asdf plugin add mcfly https://github.com/barolab/asdf-mcfly.git
 asdf install mcfly latest
 asdf global mcfly latest
+
+# Broot
+echo
+echo "-- Installing broot"
+asdf plugin add broot https://github.com/cmur2/asdf-broot.git
+asdf install broot latest
+asdf global broot latest
