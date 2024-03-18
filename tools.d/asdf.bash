@@ -33,7 +33,7 @@ done
 # lsd
 echo
 echo "-- Installing lsd"
-asdf plugin add lsd https://github.com/argylelabcoat/asdf-lsd.git
+asdf plugin add lsd https://github.com/mise-plugins/asdf-lsd/
 asdf install lsd latest
 asdf global lsd latest
 
