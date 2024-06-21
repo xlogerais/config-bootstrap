@@ -19,14 +19,16 @@ tools+=(vault)
 tools+=(terraform terragrunt)
 tools+=(ripgrep exa bat dust delta)
 
-for tool in "${tools[@]}"
-do
-    echo
-    echo "-- Installing ${tool}"
-    asdf plugin add ${tool}
-    asdf install ${tool} latest
-    asdf global ${tool} latest
+for tool in "${tools[@]}"; do
+	echo
+	echo "-- Installing ${tool}"
+	asdf plugin add ${tool}
+	asdf install ${tool} latest
+	asdf global ${tool} latest
 done
+
+# Configure asdf/direnv integration
+asdf direnv setup --shell bash --version latest
 
 # Install extra plugins and tools
 
