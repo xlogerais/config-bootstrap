@@ -8,11 +8,15 @@ git config --global rerere.enabled 1
 git config --global merge.conflictstyle diff3
 
 cat <<EOF >~/.gitignore
-# asdf
+### asdf ###
 .tool-versions
-# direnv
-.envrc
+### mise ###
+.mise.toml
+### direnv ###
 .direnv
+.envrc
+### python ###
+.venv
 EOF
 
 git config --global core.excludesfile ~/.gitignore
