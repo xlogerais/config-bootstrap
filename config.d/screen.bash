@@ -4,6 +4,6 @@
 
 if [[ ! -d ~/.screen ]]
 then
-    git clone --recursive https://github.com/xlogerais/config-screen.git ~/.screen
+    git clone --recursive https://gitea.logerais.com/xavier/config-screen.git ~/.screen
     bash ~/.screen/create-links.bash
 fi
