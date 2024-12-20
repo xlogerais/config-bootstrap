@@ -1,10 +1,9 @@
 #!/bin/bash
 
-if ( grep -q Ubuntu <(lsb_release -i) )
-then
+if (grep -q Ubuntu <(lsb_release -i)); then
     sudo apt update
     sudo apt upgrade -y
-    
+
     sudo apt install -y coreutils grep less tar tree
     sudo apt install -y man manpages-fr manpages-fr-extra
     sudo apt install -y bash zsh fish
