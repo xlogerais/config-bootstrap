@@ -1,10 +1,17 @@
 #!/bin/bash
 
-# Configuration NVIM
+# Configuration for neovim
 
-if [[ ! -d ~/.config/nvim ]]
-then
-    git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-    nvim +PackerSync
+# git_repo="https://github.com/AstroNvim/template"
+# git_branch="main"
+
+git_repo="https://gitea.cloud.logerais.com/xavier/config-astronvim.git"
+git_branch="astronvim_v4"
+config_dir=${XDG_CONFIG_HOME:-$HOME/.config}/nvim
+
+if [[ ! -d "${config_dir}" ]]; then
+    git clone "${git_repo}" --branch "${git_branch}" "${config_dir}"
+    nvim --headless +q
+else
+    cd "${config_dir}" && git pull
 fi
-
