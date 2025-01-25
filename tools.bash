@@ -1,6 +1,7 @@
 #!/bin/bash
 
-for file in tools.d/*.bash
-do
-  bash $file
+BASEDIR=$(cd "$(dirname "$0")" && pwd)
+
+for file in "${BASEDIR}"/tools.d/*.bash; do
+  bash "${file}"
 done

@@ -1,6 +1,6 @@
 # FONTS
 
-fontdir="$HOME/.local/share/fonts"
+fontdir="${HOME}/.local/share/fonts"
 
 declare -a fonts
 fonts+=("Inconsolata")
