@@ -6,7 +6,7 @@
 # git_branch="main"
 
 git_repo="https://gitea.cloud.logerais.com/xavier/config-astronvim.git"
-git_branch="astronvim_v4"
+git_branch="main"
 config_dir=${XDG_CONFIG_HOME:-$HOME/.config}/nvim
 
 if [[ ! -d "${config_dir}" ]]; then
