@@ -2,7 +2,7 @@
 
 # mise-en-place (https://mise.jdx.dev/)
 
-# Install
+# Install mise
 
 if (! command -v mise &>/dev/null); then
 	curl https://mise.run | sh
@@ -15,4 +15,6 @@ if (command -v mise &>/dev/null); then
 	# Install some plugins
 	(mise where usage &>/dev/null) || mise use -g usage # for completion
 	# mise use -g cargo:ubi # to install binaries from Github release
+
+	(mise where chezmoi &>/dev/null) || mise use -g chezmoi # to manage dotfiles
 fi
