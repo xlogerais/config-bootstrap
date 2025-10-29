@@ -1,9 +1,12 @@
 #!/bin/bash
 
-# Configuration SCREEN
+git_repo="https://gitea.cloud.logerais.com/xavier/config-screen.git"
+git_branch="master"
+config_dir=${XDG_CONFIG_HOME:-$HOME/.config}/screen
 
-if [[ ! -d ~/.screen ]]
-then
-    git clone --recursive https://gitea.logerais.com/xavier/config-screen.git ~/.screen
-    bash ~/.screen/create-links.bash
+if [[ ! -d "${config_dir}" ]]; then
+  git clone "${git_repo}" --branch "${git_branch}" --recursive "${config_dir}"
+else
+  cd "${config_dir}" && git pull
 fi
+ln -sf "${config_dir}/screenrc" "${HOME}/.screenrc"
