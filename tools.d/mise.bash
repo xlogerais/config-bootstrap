@@ -17,5 +17,6 @@ test -x ~/.local/bin/mise && eval "$(~/.local/bin/mise activate bash)"
 mise settings set experimental true
 
 # Install some essential tools
-(mise where usage &>/dev/null) || mise use -g usage     # for completion
-(mise where chezmoi &>/dev/null) || mise use -g chezmoi # to manage dotfiles
+(mise where usage &>/dev/null) || mise use -g usage               # for help completion
+(mise where chezmoi &>/dev/null) || mise use -g chezmoi           # to manage dotfiles
+(mise where powerline-go &>/dev/null) || mise use -g powerline-go # for fancy prompt
